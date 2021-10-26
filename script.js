@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 let passwordcharacterset = [];
+let generatedPassword = [];
 var promptnumberofcharacter;
 var promptuppercase;
 var promptlowercase;
@@ -124,23 +125,33 @@ if (promptlowercase === true){
 }
 promptnumbers = window.confirm("I want numeric characters in my password (Click cancel if not)");
 if (promptnumbers === true){
-  passwordcharacterset = passwordcharacterset.concat(lowerarray);
+  passwordcharacterset = passwordcharacterset.concat(numericarray);
   console.log (passwordcharacterset);
 }
 promptsymbols = window.confirm("I want special characters in my password (Click cancel if not)");
-if (promptlowercase === true){
-  passwordcharacterset = passwordcharacterset.concat(lowerarray);
+if (promptsymbols === true){
+  passwordcharacterset = passwordcharacterset.concat(symbolsarray);
   console.log (passwordcharacterset);
 }
+
+if (promptuppercase == false && promptlowercase == false && promptnumbers == false && promptsymbols == false)
+  {
+    window.alert ("Password must have some character types!")
+    return "";
+}
+
+for (let i = 0; i < promptnumberofcharacter; i++){
+  generatedPassword = generatedPassword.concat(passwordcharacterset[Math.floor(Math.random() * passwordcharacterset.length)] );
+  console.log (generatedPassword);
+}
+return generatedPassword.join ("");
 }
 
 function generatePassword(){
-  questionsFunction();
+  return questionsFunction(); 
 };
 
-for (let i = 1; i > promptnumberofcharacter; randomlyPickFromSelected){
-
-}
+// for (let i = 1; i > promptnumberofcharacter; randomlyPickFromSelected){}
 
 // Write password to the #password input
 function writePassword() {
@@ -179,8 +190,7 @@ generateBtn.addEventListener("click", writePassword);
 // else{};
 
 
-// if ( promptupptercase == false && promptlowercase == false && promptnumbers == false && promptsymbols == false)
-// {
+
 
 // }
 // else{};
