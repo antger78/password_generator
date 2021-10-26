@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+let passwordcharacterset = [];
 var promptnumberofcharacter;
-var promptupptercase;
+var promptuppercase;
 var promptlowercase;
 var promptnumbers;
 var promptsymbols;
@@ -94,7 +94,6 @@ var symbolsarray = [
   '.'
 ];
 
-let passwordcharacterset = [];
 // document.getElementById("generate").addEventListener("click", questionsFunction);
 function questionsFunction () {
 promptnumberofcharacter = parseInt (window.prompt("How many characters do you want in your password? (Between 8 and 128"));
@@ -112,14 +111,28 @@ if (promptnumberofcharacter > 128){
 }
 console.log(promptnumberofcharacter);
 promptuppercase = window.confirm("I want uppercase characters in my password (Click cancel if not)");
-if (promptuppercase){
-  passwordcharacterset.concat(upperarray);
+console.log (promptuppercase);
+console.log (upperarray);
+if (promptuppercase === true){
+  passwordcharacterset = passwordcharacterset.concat(upperarray);
   console.log (passwordcharacterset);
-};
+}
 promptlowercase = window.confirm("I want lowercase characters in my password (Click cancel if not)");
+if (promptlowercase === true){
+  passwordcharacterset = passwordcharacterset.concat(lowerarray);
+  console.log (passwordcharacterset);
+}
 promptnumbers = window.confirm("I want numeric characters in my password (Click cancel if not)");
+if (promptnumbers === true){
+  passwordcharacterset = passwordcharacterset.concat(lowerarray);
+  console.log (passwordcharacterset);
+}
 promptsymbols = window.confirm("I want special characters in my password (Click cancel if not)");
-};
+if (promptlowercase === true){
+  passwordcharacterset = passwordcharacterset.concat(lowerarray);
+  console.log (passwordcharacterset);
+}
+}
 
 function generatePassword(){
   questionsFunction();
