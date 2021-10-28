@@ -9,4 +9,4 @@ GitHub Page: https://github.com/antger78/password_generator
 Deployed Page: https://antger78.github.io/password_generator/
 
 # Screensshots
-![Screenshot1](assets\Homepage.png)
+![Screenshot1](main/assets/Homepage.png)
