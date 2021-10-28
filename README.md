@@ -9,4 +9,7 @@ GitHub Page: https://github.com/antger78/password_generator
 Deployed Page: https://antger78.github.io/password_generator/
 
 # Screensshots
-![Screenshot1](main/assets/Homepage.png)
+![Screenshot1](https://github.com/antger78/password_generator/blob/main/assets/Homepage.png?raw=true)
+![Screenshot2](https://github.com/antger78/password_generator/blob/main/assets/Promptnumberofcharacters.png?raw=true)
+![Screenshot3](https://github.com/antger78/password_generator/blob/main/assets/Promptyesorno.png?raw=true)
+![Screenshot4](https://github.com/antger78/password_generator/blob/main/assets/Password.png?raw=true)
